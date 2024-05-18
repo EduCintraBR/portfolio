@@ -1,5 +1,5 @@
 import SectionDivider from "@/components/section-divider";
-import Intro from "./intro/page";
+import Intro from "../components/intro";
 import About from "@/components/about";
 import Projects from "@/components/projects";
 
