@@ -35,29 +35,61 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Technical Support and Developer",
+    location: "Astek Sistemas",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2019",
-  },
-  {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
-    description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "I began my career in the IT field, initially working as a technical support specialist for one year. After that, I transitioned to a software developer role for six months, where I worked with Delphi and Firebird as the database.",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "2017 - 2019",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "Bachelor Degree (Information Systems)",
+    location: "Libertas Faculdades Integradas",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+      "I graduated with a bachelor's degree in Information Systems after four years of study.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2016-2019",
   },
+  {
+    title: "Software Developer",
+    location: "4T Sistemas",
+    description:
+      "Here I work exclusively in software development, using technologies such as VB6, .NET MVC, and Oracle as the database.",
+    icon: React.createElement(CgWorkAlt),
+    date: "2019 - 2020",
+  },
+  {
+    title: "Fullstack Developer (.NET and Angular)",
+    location: "Grupo Telluria",
+    description:
+      "Here I was a full-stack developer working with .NET and Angular. In this role, I have gained experience with technologies like Docker/LXC, CI/CD, and Azure. I have developed numerous APIs using .NET Core, integrated with Salesforce and Zendesk, and worked with databases such as Postgres and MySQL.",
+    icon: React.createElement(CgWorkAlt),
+    date: "2020-2022",
+  },
+  {
+    title: "Fullstack Developer (.Net and Angular)",
+    location: "Meta",
+    description:
+      "I continue to work as a full-stack developer, utilizing the same stack (.NET/Angular). In an agile environment, we have successfully developed numerous applications using .NET Core and Angular, tested with xUnit and MSTest. We used SQL Server as the database and deployed the applications on Azure DevOps with CI/CD.",
+    icon: React.createElement(CgWorkAlt),
+    date: "2022-2023",
+  },
+  {
+    title: "Fullstack Developer (.NET and Angular)",
+    location: "NTT Data Business Solutions",
+    description:
+      "I started a migration project from .NET Framework and AngularJS to .NET Core and Angular. We worked in an agile environment using relational databases like Oracle and managed the project with Jira. We also used TFS and GitHub for source control management.",
+    icon: React.createElement(CgWorkAlt),
+    date: "2023-2024",
+  },
+  {
+    title: "Pos-Graduated Degree",
+    location: "UNOPAR - Universidade do Norte do Paraná",
+    description:
+      "I have started my pos-graduated degree in Software Architecture, which I will complete by the end of the year.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2023-2024",
+  }
 ] as const;
 
 export const projectsData = [
