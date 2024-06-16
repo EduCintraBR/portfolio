@@ -31,14 +31,16 @@ export default function Contact() {
 
         <form className="mt-10 flex flex-col" 
             action={async (formData) => {
-              const { data, error } = await sendEmail(formData)
+              const response = await sendEmail(formData);
 
-              if (error) {
-                toast.error(error)
+              if ('error' in response) {
+                toast.error(response.error)
                 return
               }
-
-              toast.success('Email sent successfully!')
+              
+              if ('data' in response) {
+                toast.success('Email sent successfully!')
+              }
             }}
           >
             <input className='h-14 px-4 rounded-lg borderBlack' placeholder='Your Email' type='email' required maxLength={500} name='senderEmail'/>
