@@ -30,7 +30,7 @@ export async function sendEmail(formData: FormData): Promise<SendEmailResponse> 
 
     try {
         const data = await resend.emails.send({
-            from: 'Contact Form <onboarding@resend.com>',
+            from: 'Contact Form <onboarding@resend.dev>',
             to: 'educin15@hotmail.com',
             subject: 'Message from contact form (educintra.dev)',
             reply_to: senderEmail as string,
