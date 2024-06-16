@@ -6,9 +6,9 @@ import Link from 'next/link'
 import React from 'react'
 import { BsArrowRight, BsLinkedin } from 'react-icons/bs'
 import { FaGithubSquare } from 'react-icons/fa'
-import { HiDownload } from 'react-icons/hi'
 import { useSectionInView } from '@/lib/hooks'
 import { useActiveSectionContext } from '@/context/active-section-context'
+import DownloadCVButton from './downloadCvBtn'
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5)
@@ -78,11 +78,9 @@ export default function Intro() {
                 Contact me here <BsArrowRight 
                 className='opacity-60 grooup-hover:translate-x-1 transition'/>
             </Link>
-
-            <a className='group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 
-            hover:scale-110 active:scale-105 transition cursor-pointer borderBlack' href='/CV.pdf'download>Download CV <HiDownload className='opacity-60 group-hover:translate-y-1 transition' />
-            </a>
             
+            <DownloadCVButton />
+
             <a className='bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full outline-none
             focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition borderBlack'
             href='https://www.linkedin.com/in/educintrabr/' target='_blank'>
