@@ -2,9 +2,10 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import mangoImg from "@/public/mango.png";
+import beTheHeroImg from "@/public/be-the-hero.png";
+import posterrImg from "@/public/posterr.png";
+import ecoletaImg from "@/public/ecoleta.png"
 
 export const links = [
   {
@@ -94,29 +95,38 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "Posterr",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "Posterr is a simplified social media application similar to Twitter. It features a homepage where users can view a feed of posts, write new posts, and repost existing posts.",
+    tags: ["React", "Next.js", "SqlServer", "Tailwind", ".NET", "Unit Tests", "Docker"],
+    imageUrl: posterrImg,
   },
   {
-    title: "rmtDev",
+    title: "MangoDelivery",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "MangoDelivery is a application for delivery food made with .Net Core and Razor Pages. Using microservices architect and using RabbitMQ for messages.",
+    tags: [".NET", "SqlServer", "Razor Pages", "RabbitMQ"],
+    imageUrl: mangoImg,
   },
   {
-    title: "Word Analytics",
+    title: "Be The Hero",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      "Be The Hero connects NGOs with volunteers. The web app (ReactJS, NodeJS) allows NGOs to create cases, while the mobile app (React Native, Expo) lets volunteers find cases and contact NGOs via email or WhatsApp.",
+    tags: ["React", "TypeScript", "NodeJs", "React Native", "Expo"],
+    imageUrl: beTheHeroImg,
+  },
+  {
+    title: "Ecoleta",
+    description:
+      "Ecoleta connects users with waste collection services. The web app (ReactJS, NodeJS) allows users to find services, while the mobile app (React Native, Expo) lets users access these services on the go.",
+    tags: ["React", "NodeJs", "TypeScript", "React Native", "Expo"],
+    imageUrl: ecoletaImg,
   },
 ] as const;
 
 export const skillsData = [
+  ".NET",
+  "Angular",
   "HTML",
   "CSS",
   "JavaScript",
@@ -124,16 +134,17 @@ export const skillsData = [
   "React",
   "Next.js",
   "Node.js",
+  "Nest.js",
   "Git",
   "Tailwind",
-  "Prisma",
-  "MongoDB",
-  "Redux",
   "GraphQL",
-  "Apollo",
   "Express",
   "PostgreSQL",
   "Python",
-  "Django",
   "Framer Motion",
+  "Entity Framework",
+  "Dapper",
+  "Delphi",
+  "VB6",
+  "Hangfire"
 ] as const;
