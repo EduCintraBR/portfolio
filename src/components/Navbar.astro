@@ -1,0 +1,32 @@
+---
+import LanguagePicker from './LanguagePicker.astro';
+import type { ui } from '../i18n/data';
+
+interface Props {
+    lang: string;
+    content: typeof ui.en;
+}
+
+const { lang, content } = Astro.props;
+---
+<nav class="fixed top-0 w-full z-50 border-b border-border backdrop-blur-xl bg-bg/85">
+    <div class="max-w-[1080px] mx-auto px-8 h-16 flex items-center justify-between">
+        <a href={lang === 'en' ? '#' : '/pt#'} class="font-display font-bold text-lg tracking-tight text-text hover:text-accent transition-colors">
+            Eduardo Cintra
+        </a>
+
+        <div class="hidden md:flex items-center gap-8 font-mono text-[11px] uppercase tracking-widest text-text2">
+            <a href="#about" class="hover:text-accent transition-colors">{content['nav.about']}</a>
+            <a href="#experience" class="hover:text-accent transition-colors">{content['nav.experience']}</a>
+            <a href="#work" class="hover:text-accent transition-colors">{content['nav.work']}</a>
+            <a href="#contact" class="hover:text-accent transition-colors">{content['nav.contact']}</a>
+        </div>
+
+        <div class="flex items-center gap-4">
+            <LanguagePicker currentLang={lang} />
+            <a href={content['links.linkedin']} target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center justify-center px-6 py-3 border border-border rounded-[2px] font-mono text-[11px] uppercase tracking-widest text-text hover:border-text2 hover:bg-surface transition-all duration-300">
+                {content['nav.cta']}
+            </a>
+        </div>
+    </div>
+</nav>

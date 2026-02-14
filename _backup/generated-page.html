@@ -1,0 +1,503 @@
+<html lang="en" class="scroll-smooth"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eduardo Cintra — Senior Full-Stack &amp; AI Engineer</title>
+<meta name="description" content="Senior Full-Stack Engineer specializing in legacy modernization and AI integration.">
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+
+<!-- Iconify -->
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+bg: '#0A0A0F',
+surface: '#111118',
+surface2: '#181824',
+accent: '#00E5CC',
+accent2: '#FF6B35',
+text: '#F0EDE8',
+text2: '#9898B0',
+text3: '#5A5A70',
+border: 'rgba(0,229,204,0.10)',
+border2: 'rgba(255,107,53,0.12)',
+},
+fontFamily: {
+display: ['Syne', 'sans-serif'],
+body: ['DM Mono', 'monospace'],
+mono: ['Space Mono', 'monospace'],
+},
+letterSpacing: {
+tightest: '-0.05em',
+widest: '0.2em',
+},
+boxShadow: {
+'glow': '0 0 40px rgba(0,229,204,0.15)',
+'glow-btn': '0 8px 32px rgba(0,229,204,0.3)',
+},
+animation: {
+'pulse-slow': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+}
+}
+}
+}
+</script>
+<style>
+/* Custom Utilities avoiding CSS classes where possible, but needed for specific effects */
+body {
+background-color: #0A0A0F;
+background-image:
+radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+radial-gradient(circle at 20% 20%, rgba(0,229,204,0.04) 0%, transparent 50%),
+radial-gradient(circle at 80% 80%, rgba(255,107,53,0.04) 0%, transparent 50%);
+background-size: 28px 28px, 100% 100%, 100% 100%;
+background-attachment: fixed;
+}
+.text-outline {
+-webkit-text-stroke: 1px #5A5A70;
+color: transparent;
+}
+.scrollbar-hide::-webkit-scrollbar {
+display: none;
+}
+::selection {
+background: rgba(0, 229, 204, 0.2);
+color: #fff;
+}
+/* Syntax Highlighting Colors */
+.token-keyword { color: #C792EA; }
+.token-func { color: #82AAFF; }
+.token-string { color: #C3E88D; }
+.token-number { color: #F78C6C; }
+.token-comment { color: #5A5A70; font-style: italic; }
+.token-prop { color: #89DDFF; }
+.token-val { color: #9898B0; }
+</style></head>
+<body class="text-text font-body antialiased selection:bg-accent selection:text-bg">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 border-b border-border backdrop-blur-xl bg-bg/85">
+        <div class="max-w-[1080px] mx-auto px-8 h-16 flex items-center justify-between">
+            <a href="#" class="font-display font-bold text-lg tracking-tight text-text hover:text-accent transition-colors">
+                Eduardo Cintra
+            </a>
+
+            <div class="hidden md:flex items-center gap-8 font-mono text-[11px] uppercase tracking-widest text-text2">
+                <a href="#about" class="hover:text-accent transition-colors">About</a>
+                <a href="#experience" class="hover:text-accent transition-colors">Experience</a>
+                <a href="#work" class="hover:text-accent transition-colors">Work</a>
+                <a href="#contact" class="hover:text-accent transition-colors">Contact</a>
+            </div>
+
+            <a href="mailto:contact@eduardocintra.dev" class="hidden sm:inline-flex items-center justify-center px-6 py-3 border border-border rounded-[2px] font-mono text-[11px] uppercase tracking-widest text-text hover:border-text2 hover:bg-surface transition-all duration-300">
+                Let's Talk
+            </a>
+        </div>
+    </nav>
+
+    <main class="w-full max-w-[1080px] mx-auto px-8">
+
+        <!-- Hero Section -->
+        <section class="min-h-screen flex flex-col justify-center pt-24 pb-20 relative">
+            
+            <!-- Animated Entrance Wrapper -->
+            <div class="space-y-8 animate-[fadeIn_1s_ease-out]">
+                
+                <!-- Badge -->
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-border bg-[rgba(0,229,204,0.05)] w-fit">
+                    <span class="relative flex h-1.5 w-1.5">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-accent"></span>
+                    </span>
+                    <span class="font-mono text-[10px] uppercase tracking-widest text-accent font-bold">Available for Senior Roles</span>
+                </div>
+
+                <!-- H1 -->
+                <h1 class="font-display font-extrabold text-[clamp(42px,6vw,80px)] leading-[1.0] tracking-tight -ml-[0.05em]">
+                    <span class="block text-text">Senior Engineer.</span>
+                    <span class="block text-accent">Bridging Legacy</span>
+                    <span class="block text-outline">to the AI Era.</span>
+                </h1>
+
+                <!-- Subtext -->
+                <p class="font-body font-light text-text2 text-[15px] leading-relaxed max-w-xl">
+                    I architect and modernize complex systems — transforming decade-old codebases into cloud-native, AI-powered platforms that scale. 7+ years shipping production software across banking, utilities, and government.
+                </p>
+
+                <!-- CTA Row -->
+                <div class="flex flex-wrap items-center gap-4 pt-4">
+                    <a href="#work" class="inline-flex items-center gap-2 bg-accent text-bg px-8 py-3.5 rounded-[2px] font-mono text-[11px] font-bold uppercase tracking-widest hover:bg-[#00C4AF] hover:-translate-y-[1px] hover:shadow-glow-btn transition-all duration-300">
+                        View Case Studies
+                        <iconify-icon icon="solar:arrow-right-linear" width="16" stroke-width="2"></iconify-icon>
+                    </a>
+                    <a href="#" class="inline-flex items-center gap-2 bg-transparent border border-border text-text px-8 py-3.5 rounded-[2px] font-mono text-[11px] uppercase tracking-widest hover:border-text2 transition-all duration-300">
+                        Download Resume
+                        <iconify-icon icon="solar:file-download-linear" width="16" stroke-width="1.5"></iconify-icon>
+                    </a>
+                </div>
+
+                <!-- Stats Bar -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-border border border-border rounded-lg overflow-hidden mt-12 max-w-3xl">
+                    <div class="bg-surface p-6 flex flex-col justify-center">
+                        <span class="font-display font-extrabold text-4xl text-accent mb-1">7+</span>
+                        <span class="font-mono text-[10px] text-text3 uppercase tracking-widest">Years Experience</span>
+                    </div>
+                    <div class="bg-surface p-6 flex flex-col justify-center">
+                        <span class="font-display font-extrabold text-4xl text-accent mb-1">40%</span>
+                        <span class="font-mono text-[10px] text-text3 uppercase tracking-widest">Scalability Gain</span>
+                    </div>
+                    <div class="bg-surface p-6 flex flex-col justify-center">
+                        <span class="font-display font-extrabold text-4xl text-accent mb-1">90%</span>
+                        <span class="font-mono text-[10px] text-text3 uppercase tracking-widest">Test Coverage</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="h-px w-full bg-gradient-to-r from-transparent via-border to-transparent opacity-50"></div>
+
+        <!-- About Section -->
+        <section id="about" class="py-24 scroll-mt-16">
+            <div class="flex items-center gap-3 mb-8">
+                <span class="font-mono text-[10px] text-accent uppercase tracking-widest">01 — About</span>
+                <div class="h-px w-12 bg-accent/30"></div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-16 items-start">
+                <!-- Text Content -->
+                <div class="space-y-6">
+                    <h2 class="font-display font-bold text-[clamp(28px,4vw,46px)] leading-[1.1] tracking-tight text-text">
+                        I build the systems nobody else wants to touch.
+                    </h2>
+                    
+                    <div class="space-y-6 font-body font-light text-[15px] leading-loose text-text2">
+                        <p>
+                            I'm Eduardo — a Senior Full-Stack Engineer based in Brazil, specializing in the kind of work that actually matters: taking systems that are holding companies back and transforming them into competitive advantages.
+                        </p>
+                        <p>
+                            Whether that's migrating a 15-year-old .NET Framework monolith to a cloud-native microservices architecture, or embedding an AI agent into a financial platform to automate hours of manual data analysis — I bridge the gap between where systems are and where they need to be.
+                        </p>
+                        <p>
+                            Currently at <strong class="text-text font-normal">Nava Technology</strong>, working with high-availability banking infrastructure and pioneering AI integration using LLMs, Agents, and MCP Servers.
+                        </p>
+                    </div>
+
+                    <!-- Tech Tags -->
+                    <div class="flex flex-wrap gap-2 pt-4">
+                        <span class="px-3 py-1.5 rounded-[2px] border border-accent/30 text-accent font-mono text-[10px] uppercase tracking-wide">.NET Core</span>
+                        <span class="px-3 py-1.5 rounded-[2px] border border-accent/30 text-accent font-mono text-[10px] uppercase tracking-wide">React</span>
+                        <span class="px-3 py-1.5 rounded-[2px] border border-accent/30 text-accent font-mono text-[10px] uppercase tracking-wide">AI Agents</span>
+                        <span class="px-3 py-1.5 rounded-[2px] border border-accent/30 text-accent font-mono text-[10px] uppercase tracking-wide">Azure</span>
+                        <span class="px-3 py-1.5 rounded-[2px] border border-surface2 bg-surface text-text3 hover:text-accent hover:border-accent/30 transition-colors font-mono text-[10px] uppercase tracking-wide">Node.js</span>
+                        <span class="px-3 py-1.5 rounded-[2px] border border-surface2 bg-surface text-text3 hover:text-accent hover:border-accent/30 transition-colors font-mono text-[10px] uppercase tracking-wide">Kafka</span>
+                        <span class="px-3 py-1.5 rounded-[2px] border border-surface2 bg-surface text-text3 hover:text-accent hover:border-accent/30 transition-colors font-mono text-[10px] uppercase tracking-wide">Clean Arch</span>
+                        <span class="px-3 py-1.5 rounded-[2px] border border-surface2 bg-surface text-text3 hover:text-accent hover:border-accent/30 transition-colors font-mono text-[10px] uppercase tracking-wide">Next.js</span>
+                    </div>
+                </div>
+
+                <!-- Decorative Code Block -->
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-accent/10 to-accent2/10 rounded-lg blur opacity-50 group-hover:opacity-100 transition duration-1000"></div>
+                    <div class="relative bg-bg border border-border rounded-lg overflow-hidden font-mono text-[13px] leading-relaxed shadow-2xl">
+                        <!-- Window Header -->
+                        <div class="flex items-center gap-2 px-4 py-3 border-b border-border bg-surface">
+                            <div class="flex gap-1.5">
+                                <div class="w-3 h-3 rounded-full bg-[#FF5F57]"></div>
+                                <div class="w-3 h-3 rounded-full bg-[#FFBD2E]"></div>
+                                <div class="w-3 h-3 rounded-full bg-[#28CA41]"></div>
+                            </div>
+                            <span class="ml-2 text-text3 text-[11px]">eduardo.profile.ts</span>
+                        </div>
+                        <!-- Code Content -->
+                        <div class="p-6 overflow-x-auto">
+<pre class="m-0"><code><span class="text-text3 italic">// eduardo.profile.ts</span>
+<span class="token-keyword">const</span> <span class="token-func">engineer</span> = {
+  <span class="token-prop">name</span>: <span class="token-string">"Eduardo Cintra"</span>,
+  <span class="token-prop">role</span>: <span class="token-string">"Senior Full-Stack"</span>,
+  <span class="token-prop">location</span>: <span class="token-string">"Brazil 🇧🇷"</span>,
+  <span class="token-prop">yearsXP</span>: <span class="token-number">7</span>,
+  <span class="token-comment">// Core strengths</span>
+  <span class="token-prop">superpower</span>: [
+    <span class="token-string">"Legacy Modernization"</span>,
+    <span class="token-string">"AI Integration (LLMs)"</span>,
+    <span class="token-string">"Microservices Design"</span>,
+  ],
+  <span class="token-prop">currentlyAt</span>: <span class="token-string">"Nava Technology"</span>,
+  <span class="token-prop">openToWork</span>: <span class="token-keyword">true</span>,
+};</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="h-px w-full bg-gradient-to-r from-transparent via-border to-transparent opacity-50"></div>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-24 scroll-mt-16">
+            <div class="flex items-center gap-3 mb-12">
+                <span class="font-mono text-[10px] text-accent uppercase tracking-widest">02 — Experience</span>
+                <div class="h-px w-12 bg-accent/30"></div>
+            </div>
+
+            <div class="mb-12">
+                <h2 class="font-display font-bold text-[clamp(28px,4vw,46px)] leading-[1.1] tracking-tight text-text mb-4">
+                    7 years. 5 companies. <br class="hidden md:block">One consistent pattern.
+                </h2>
+                <p class="font-body font-light text-text2 text-[15px] max-w-2xl">
+                    Taking on the hard problems — the migrations nobody wanted to do, the integrations that seemed impossible, the performance targets that required rethinking the architecture.
+                </p>
+            </div>
+
+            <!-- Timeline Container -->
+            <div class="relative pl-8 md:pl-0">
+                <!-- Vertical Line -->
+                <div class="absolute left-0 md:left-[50%] top-0 bottom-0 w-px bg-gradient-to-b from-accent via-border to-transparent md:-translate-x-1/2"></div>
+
+                <!-- Timeline Item 1 -->
+                <div class="relative mb-16 md:grid md:grid-cols-2 md:gap-16 group">
+                    <div class="hidden md:block text-right self-start pt-1">
+                        <span class="font-mono text-[11px] text-accent uppercase tracking-widest block mb-1">Oct 2025 — Present</span>
+                        <h3 class="font-display font-bold text-xl text-text">Nava — Technology for Business</h3>
+                        <p class="font-body text-sm text-text2 mt-2">Senior Software Engineer</p>
+                    </div>
+                    
+                    <!-- Marker -->
+                    <div class="absolute left-[-32px] md:left-1/2 md:-translate-x-1/2 top-1.5 flex items-center justify-center">
+                         <div class="w-3 h-3 rounded-full bg-accent shadow-[0_0_12px_rgba(0,229,204,0.6)]"></div>
+                    </div>
+
+                    <div class="md:col-start-2 pt-1 pb-8">
+                        <!-- Mobile Header -->
+                        <div class="md:hidden mb-4">
+                             <span class="font-mono text-[11px] text-accent uppercase tracking-widest block mb-1">Oct 2025 — Present</span>
+                             <h3 class="font-display font-bold text-xl text-text">Nava Technology</h3>
+                             <p class="font-body text-sm text-text2">Senior Software Engineer</p>
+                        </div>
+
+                        <p class="font-body font-light text-text2 text-[15px] leading-relaxed mb-6">
+                            Architecting high-availability banking backends with .NET 8/10 and Node.js. Leading the charge on AI tooling integration — deploying AI Agents and MCP servers to automate financial data analysis that previously required manual work. Managing event-driven systems via Kafka/RabbitMQ and AWS infrastructure.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-surface border border-surface2 text-text3 text-[9px] font-mono uppercase tracking-wide rounded-[2px]">.NET 10</span>
+                            <span class="px-2 py-1 bg-surface border border-surface2 text-text3 text-[9px] font-mono uppercase tracking-wide rounded-[2px]">AI Agents</span>
+                            <span class="px-2 py-1 bg-surface border border-surface2 text-text3 text-[9px] font-mono uppercase tracking-wide rounded-[2px]">Kafka</span>
+                            <span class="px-2 py-1 bg-surface border border-surface2 text-text3 text-[9px] font-mono uppercase tracking-wide rounded-[2px]">AWS EKS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="relative mb-16 md:grid md:grid-cols-2 md:gap-16 group">
+                    <div class="md:col-start-2 hidden md:block text-left self-start pt-1">
+                        <span class="font-mono text-[11px] text-text2 uppercase tracking-widest block mb-1">Oct 2023 — Oct 2025</span>
+                        <h3 class="font-display font-bold text-xl text-text">NTT DATA Business Solutions</h3>
+                        <p class="font-body text-sm text-text2 mt-2">Fullstack Developer</p>
+                    </div>
+
+                    <!-- Marker -->
+                    <div class="absolute left-[-32px] md:left-1/2 md:-translate-x-1/2 top-1.5 flex items-center justify-center">
+                        <div class="w-2.5 h-2.5 rounded-full bg-surface border border-text3 group-hover:border-accent group-hover:bg-accent transition-colors"></div>
+                   </div>
+
+                    <div class="md:col-start-1 md:row-start-1 md:text-right pt-1 pb-8">
+                         <!-- Mobile Header -->
+                         <div class="md:hidden mb-4">
+                            <span class="font-mono text-[11px] text-text2 uppercase tracking-widest block mb-1">Oct 2023 — Oct 2025</span>
+                            <h3 class="font-display font-bold text-xl text-text">NTT DATA</h3>
+                            <p class="font-body text-sm text-text2">Fullstack Developer</p>
+                       </div>
+
+                        <p class="font-body font-light text-text2 text-[15px] leading-relaxed mb-6">
+                            Led the full migration of legacy on-premise .NET Framework applications to modern .NET Core / Azure Cloud architectures for electric utility clients — achieving a 40% scalability improvement. Integrated Azure AI Document Intelligence for automated data extraction.
+                        </p>
+                        <div class="flex flex-wrap md:justify-end gap-2">
+                            <span class="px-2 py-1 bg-surface border border-surface2 text-text3 text-[9px] font-mono uppercase tracking-wide rounded-[2px]">.NET Core</span>
+                            <span class="px-2 py-1 bg-surface border border-surface2 text-text3 text-[9px] font-mono uppercase tracking-wide rounded-[2px]">Azure</span>
+                            <span class="px-2 py-1 bg-surface border border-surface2 text-text3 text-[9px] font-mono uppercase tracking-wide rounded-[2px]">AI Doc Intel</span>
+                            <span class="px-2 py-1 bg-surface border border-surface2 text-text3 text-[9px] font-mono uppercase tracking-wide rounded-[2px]">CI/CD</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Timeline Item 3 -->
+                 <div class="relative mb-16 md:grid md:grid-cols-2 md:gap-16 group">
+                    <div class="hidden md:block text-right self-start pt-1">
+                        <span class="font-mono text-[11px] text-text2 uppercase tracking-widest block mb-1">Aug 2022 — Oct 2023</span>
+                        <h3 class="font-display font-bold text-xl text-text">Meta IT</h3>
+                        <p class="font-body text-sm text-text2 mt-2">Full Stack Developer</p>
+                    </div>
+                    
+                    <div class="absolute left-[-32px] md:left-1/2 md:-translate-x-1/2 top-1.5 flex items-center justify-center">
+                        <div class="w-2.5 h-2.5 rounded-full bg-surface border border-text3 group-hover:border-accent transition-colors"></div>
+                    </div>
+
+                    <div class="md:col-start-2 pt-1 pb-8">
+                        <div class="md:hidden mb-4">
+                            <span class="font-mono text-[11px] text-text2 uppercase tracking-widest block mb-1">Aug 2022 — Oct 2023</span>
+                            <h3 class="font-display font-bold text-xl text-text">Meta IT</h3>
+                            <p class="font-body text-sm text-text2">Full Stack Developer</p>
+                       </div>
+                        <p class="font-body font-light text-text2 text-[15px] leading-relaxed mb-6">
+                            Modernized classic ASP.NET/VB6 government systems into .NET 6/8 and React/Angular, working under strict security standards. Enforced rigorous TDD practices that achieved 90%+ code coverage across the codebase.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-surface border border-surface2 text-text3 text-[9px] font-mono uppercase tracking-wide rounded-[2px]">.NET 8</span>
+                            <span class="px-2 py-1 bg-surface border border-surface2 text-text3 text-[9px] font-mono uppercase tracking-wide rounded-[2px]">React</span>
+                            <span class="px-2 py-1 bg-surface border border-surface2 text-text3 text-[9px] font-mono uppercase tracking-wide rounded-[2px]">TDD</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="h-px w-full bg-gradient-to-r from-transparent via-border to-transparent opacity-50"></div>
+
+        <!-- Case Study Section -->
+        <section id="work" class="py-24 scroll-mt-16">
+            <div class="flex items-center gap-3 mb-12">
+                <span class="font-mono text-[10px] text-accent uppercase tracking-widest">03 — Featured Work</span>
+                <div class="h-px w-12 bg-accent/30"></div>
+            </div>
+
+            <div class="mb-12">
+                <h2 class="font-display font-bold text-[clamp(28px,4vw,46px)] leading-[1.1] tracking-tight text-text mb-4">Case Study</h2>
+                <p class="font-body font-light text-text2 text-[15px] max-w-2xl">
+                    A deep dive into a problem worth solving — from architecture decision to measurable business outcome.
+                </p>
+            </div>
+
+            <div class="bg-surface border border-border rounded-lg overflow-hidden group hover:border-accent/30 transition-colors duration-500">
+                <!-- Card Header -->
+                <div class="relative bg-gradient-to-r from-surface2 to-surface px-8 py-10 border-b border-border">
+                    <span class="font-mono text-[10px] text-accent2 uppercase tracking-widest mb-4 block">Case Study #001</span>
+                    <h3 class="font-display font-bold text-2xl md:text-3xl text-text mb-3">Customer Success Intelligence Platform</h3>
+                    <p class="font-body font-light text-text2 text-[15px] max-w-3xl">
+                        Built from scratch: a real-time analytics engine that transformed how a company understood — and accelerated — client onboarding.
+                    </p>
+                </div>
+
+                <!-- Card Body -->
+                <div class="p-8 grid md:grid-cols-3 gap-8 border-b border-border">
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-2 mb-2">
+                            <iconify-icon icon="solar:danger-circle-linear" class="text-accent2"></iconify-icon>
+                            <h4 class="font-display font-bold text-lg text-text">The Problem</h4>
+                        </div>
+                        <p class="font-body font-light text-text2 text-sm leading-relaxed">
+                            Flying Blind on Onboarding. The company provided training materials but had zero visibility. Were clients actually watching? Where did they drop off? Nobody knew.
+                        </p>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-2 mb-2">
+                            <iconify-icon icon="solar:code-square-linear" class="text-accent"></iconify-icon>
+                            <h4 class="font-display font-bold text-lg text-text">The Solution</h4>
+                        </div>
+                        <p class="font-body font-light text-text2 text-sm leading-relaxed">
+                            Async Heartbeat Tracking. Architected a full-stack system (.NET Core + React) with a non-blocking event engine. Asynchronous signals log user progress without degrading experience.
+                        </p>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-2 mb-2">
+                            <iconify-icon icon="solar:chart-square-linear" class="text-accent"></iconify-icon>
+                            <h4 class="font-display font-bold text-lg text-text">The Result</h4>
+                        </div>
+                        <p class="font-body font-light text-text2 text-sm leading-relaxed">
+                            Data-Driven CS Team. The dashboard revealed exact drop-off points. The CS team stopped guessing and started intervening at the right moment, driving adoption up.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Impact Footer -->
+                <div class="p-8 bg-gradient-to-r from-[rgba(0,229,204,0.05)] to-[rgba(255,107,53,0.05)] flex flex-col md:flex-row items-center gap-8">
+                    <div class="flex flex-col items-center justify-center min-w-[120px]">
+                        <span class="font-display font-extrabold text-[52px] leading-none text-accent">∞</span>
+                        <span class="font-mono text-[9px] uppercase tracking-widest text-text3 mt-1">Visibility Gained</span>
+                    </div>
+                    <div class="h-px w-full md:w-px md:h-16 bg-border"></div>
+                    <p class="font-body text-text2 text-[14px] leading-relaxed italic">
+                        "Before this platform, the company had <strong class="text-text font-normal">no data on client engagement</strong> whatsoever. The shift from zero insight to a complete behavioral analytics dashboard represents a fundamental change in how the team operates — <strong class="text-text font-normal">from reactive to proactive, from guessing to knowing.</strong>"
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="h-px w-full bg-gradient-to-r from-transparent via-border to-transparent opacity-50"></div>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-32 scroll-mt-16 text-center">
+            <span class="font-mono text-[10px] text-accent uppercase tracking-widest mb-6 block">04 — Contact</span>
+            
+            <h2 class="font-display font-extrabold text-[clamp(40px,7vw,90px)] leading-[0.95] tracking-tight mb-8">
+                <span class="block text-text">Let's build</span>
+                <span class="block text-text">something</span>
+                <span class="block text-accent">hard.</span>
+            </h2>
+
+            <p class="font-body font-light text-text2 text-[16px] max-w-xl mx-auto mb-12">
+                Have a legacy system that needs a new life? An AI integration that needs an architect? I'm interested in the problems other people avoid.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
+                <a href="mailto:contact@eduardocintra.dev" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-accent text-bg px-10 py-4 rounded-[2px] font-mono text-[11px] font-bold uppercase tracking-widest hover:bg-[#00C4AF] hover:-translate-y-[1px] hover:shadow-glow-btn transition-all duration-300">
+                    Send a Message
+                    <iconify-icon icon="solar:plain-linear" width="16" stroke-width="2"></iconify-icon>
+                </a>
+                <a href="#" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-transparent border border-border text-text px-10 py-4 rounded-[2px] font-mono text-[11px] uppercase tracking-widest hover:border-text2 transition-all duration-300">
+                    Download Resume
+                    <iconify-icon icon="solar:file-download-linear" width="16" stroke-width="1.5"></iconify-icon>
+                </a>
+            </div>
+
+            <!-- Social Links -->
+            <div class="flex items-center justify-center gap-6">
+                <a href="#" class="text-text2 hover:text-accent transition-colors">
+                    <iconify-icon icon="mdi:github" width="24"></iconify-icon>
+                </a>
+                <a href="#" class="text-text2 hover:text-accent transition-colors">
+                    <iconify-icon icon="mdi:linkedin" width="24"></iconify-icon>
+                </a>
+                <a href="#" class="text-text2 hover:text-accent transition-colors">
+                    <iconify-icon icon="mdi:twitter" width="24"></iconify-icon>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-border py-8 bg-surface/30">
+        <div class="max-w-[1080px] mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <span class="font-display font-bold text-text text-lg tracking-tight">Eduardo Cintra</span>
+            <span class="font-mono text-[10px] text-text3 uppercase tracking-widest">© 2025. System Online.</span>
+        </div>
+    </footer>
+
+    <script>
+        // Simple Intersection Observer for scroll reveal animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-8');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('section > div').forEach(el => {
+                el.classList.add('transition-all', 'duration-700', 'ease-out', 'opacity-0', 'translate-y-8');
+                observer.observe(el);
+            });
+        });
+    </script>
+
+</body></html>

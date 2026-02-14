@@ -1,0 +1,18 @@
+---
+import { languages } from '../i18n/data';
+
+interface Props {
+  currentLang: string;
+}
+
+const { currentLang } = Astro.props;
+
+// Helper to toggle language
+const targetLang = currentLang === 'en' ? 'pt' : 'en';
+const targetUrl = currentLang === 'en' ? '/pt' : '/';
+const label = currentLang === 'en' ? 'PT' : 'EN';
+---
+
+<a href={targetUrl} class="font-mono text-[11px] font-bold text-text2 hover:text-accent transition-colors border border-border rounded px-2 py-1 uppercase tracking-wider">
+  {label}
+</a>

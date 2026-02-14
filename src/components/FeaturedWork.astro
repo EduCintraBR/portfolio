@@ -1,0 +1,75 @@
+---
+import type { ui, featuredWorkData } from '../i18n/data';
+
+interface Props {
+    content: typeof ui.en;
+    work: typeof featuredWorkData.en;
+}
+
+const { content, work } = Astro.props;
+---
+<section id="work" class="py-24 scroll-mt-16">
+    <div class="flex items-center gap-3 mb-12">
+        <span class="font-mono text-[10px] text-accent uppercase tracking-widest">{content['work.title']}</span>
+        <div class="h-px w-12 bg-accent/30"></div>
+    </div>
+
+    <div class="mb-12">
+        <h2 class="font-display font-bold text-[clamp(28px,4vw,46px)] leading-[1.1] tracking-tight text-text mb-4">{content['work.h2']}</h2>
+        <p class="font-body font-light text-text2 text-[15px] max-w-2xl">
+            {content['work.desc']}
+        </p>
+    </div>
+
+    <div class="bg-surface border border-border rounded-lg overflow-hidden group hover:border-accent/30 transition-colors duration-500">
+        <!-- Card Header -->
+        <div class="relative bg-gradient-to-r from-surface2 to-surface px-8 py-10 border-b border-border">
+            <span class="font-mono text-[10px] text-accent2 uppercase tracking-widest mb-4 block">{work.subtitle}</span>
+            <h3 class="font-display font-bold text-2xl md:text-3xl text-text mb-3">{work.title}</h3>
+            <p class="font-body font-light text-text2 text-[15px] max-w-3xl">
+                {work.desc}
+            </p>
+        </div>
+
+        <!-- Card Body -->
+        <div class="p-8 grid md:grid-cols-3 gap-8 border-b border-border">
+            <div class="space-y-3">
+                <div class="flex items-center gap-2 mb-2">
+                    <iconify-icon icon="solar:danger-circle-linear" class="text-accent2"></iconify-icon>
+                    <h4 class="font-display font-bold text-lg text-text">{work.problem.title}</h4>
+                </div>
+                <p class="font-body font-light text-text2 text-sm leading-relaxed">
+                    {work.problem.text}
+                </p>
+            </div>
+            <div class="space-y-3">
+                <div class="flex items-center gap-2 mb-2">
+                    <iconify-icon icon="solar:code-square-linear" class="text-accent"></iconify-icon>
+                    <h4 class="font-display font-bold text-lg text-text">{work.solution.title}</h4>
+                </div>
+                <p class="font-body font-light text-text2 text-sm leading-relaxed">
+                    {work.solution.text}
+                </p>
+            </div>
+            <div class="space-y-3">
+                <div class="flex items-center gap-2 mb-2">
+                    <iconify-icon icon="solar:chart-square-linear" class="text-accent"></iconify-icon>
+                    <h4 class="font-display font-bold text-lg text-text">{work.result.title}</h4>
+                </div>
+                <p class="font-body font-light text-text2 text-sm leading-relaxed">
+                    {work.result.text}
+                </p>
+            </div>
+        </div>
+
+        <!-- Impact Footer -->
+        <div class="p-8 bg-gradient-to-r from-[rgba(0,229,204,0.05)] to-[rgba(255,107,53,0.05)] flex flex-col md:flex-row items-center gap-8">
+            <div class="flex flex-col items-center justify-center min-w-[120px]">
+                <span class="font-display font-extrabold text-[52px] leading-none text-accent">{work.impact.stat}</span>
+                <span class="font-mono text-[9px] uppercase tracking-widest text-text3 mt-1">{work.impact.label}</span>
+            </div>
+            <div class="h-px w-full md:w-px md:h-16 bg-border"></div>
+            <p class="font-body text-text2 text-[14px] leading-relaxed italic" set:html={work.impact.quote}></p>
+        </div>
+    </div>
+</section>

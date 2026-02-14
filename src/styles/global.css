@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0A0A0F;
+  --color-surface: #111118;
+  --color-surface2: #181824;
+  --color-accent: #00E5CC;
+  --color-accent2: #FF6B35;
+  --color-text: #F0EDE8;
+  --color-text2: #9898B0;
+  --color-text3: #5A5A70;
+  --color-border: rgba(0,229,204,0.10);
+  --color-border2: rgba(255,107,53,0.12);
+
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Mono', monospace;
+  --font-mono: 'Space Mono', monospace;
+
+  --tracking-tightest: -0.05em;
+  --tracking-widest: 0.2em;
+
+  --shadow-glow: 0 0 40px rgba(0,229,204,0.15);
+  --shadow-glow-btn: 0 8px 32px rgba(0,229,204,0.3);
+
+  --animate-pulse-slow: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-bg);
+    background-image:
+      radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+      radial-gradient(circle at 20% 20%, rgba(0,229,204,0.04) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(255,107,53,0.04) 0%, transparent 50%);
+    background-size: 28px 28px, 100% 100%, 100% 100%;
+    background-attachment: fixed;
+    color: var(--color-text);
+  }
+
+  ::selection {
+    background: rgba(0, 229, 204, 0.2);
+    color: #fff;
+  }
+}
+
+@layer utilities {
+  .text-outline {
+    -webkit-text-stroke: 1px #5A5A70;
+    color: transparent;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Syntax Highlighting Colors */
+  .token-keyword { color: #C792EA; }
+  .token-func { color: #82AAFF; }
+  .token-string { color: #C3E88D; }
+  .token-number { color: #F78C6C; }
+  .token-comment { color: #5A5A70; font-style: italic; }
+  .token-prop { color: #89DDFF; }
+  .token-val { color: #9898B0; }
+}

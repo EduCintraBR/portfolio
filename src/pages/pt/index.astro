@@ -1,0 +1,33 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Hero from '../../components/Hero.astro';
+import About from '../../components/About.astro';
+import Experience from '../../components/Experience.astro';
+import FeaturedWork from '../../components/FeaturedWork.astro';
+import Contact from '../../components/Contact.astro';
+import Footer from '../../components/Footer.astro';
+import { ui, experienceData, featuredWorkData, profileData } from '../../i18n/data';
+
+const lang = 'pt';
+const content = ui[lang];
+const jobs = experienceData[lang];
+const work = featuredWorkData[lang];
+const profile = profileData[lang];
+---
+
+<Layout title="Eduardo Cintra — Engenheiro Sênior Full-Stack & IA" description="Engenheiro Full-Stack Sênior especializado em modernização de legado e integração de IA.">
+	<Navbar lang={lang} content={content} />
+	<main class="w-full max-w-[1080px] mx-auto px-8">
+		<Hero content={content} />
+		<div class="h-px w-full bg-gradient-to-r from-transparent via-border to-transparent opacity-50"></div>
+		<About content={content} profile={profile} />
+		<div class="h-px w-full bg-gradient-to-r from-transparent via-border to-transparent opacity-50"></div>
+		<Experience content={content} jobs={jobs} />
+		<div class="h-px w-full bg-gradient-to-r from-transparent via-border to-transparent opacity-50"></div>
+		<FeaturedWork content={content} work={work} />
+		<div class="h-px w-full bg-gradient-to-r from-transparent via-border to-transparent opacity-50"></div>
+		<Contact content={content} />
+	</main>
+	<Footer content={content} />
+</Layout>

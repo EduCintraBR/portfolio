@@ -1,0 +1,15 @@
+---
+import type { ui } from '../i18n/data';
+
+interface Props {
+    content: typeof ui.en;
+}
+
+const { content } = Astro.props;
+---
+<footer class="border-t border-border py-8 bg-surface/30">
+    <div class="max-w-[1080px] mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <span class="font-display font-bold text-text text-lg tracking-tight">Eduardo Cintra</span>
+        <span class="font-mono text-[10px] text-text3 uppercase tracking-widest">{content['footer.rights']}</span>
+    </div>
+</footer>

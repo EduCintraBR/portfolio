@@ -1,0 +1,64 @@
+---
+import type { ui } from '../i18n/data';
+
+interface Props {
+    content: typeof ui.en;
+}
+
+const { content } = Astro.props;
+---
+<section class="min-h-screen flex flex-col justify-center pt-24 pb-20 relative">
+    
+    <!-- Animated Entrance Wrapper -->
+    <div class="space-y-8 animate-[fadeIn_1s_ease-out]">
+        
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-border bg-[rgba(0,229,204,0.05)] w-fit">
+            <span class="relative flex h-1.5 w-1.5">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-accent"></span>
+            </span>
+            <span class="font-mono text-[10px] uppercase tracking-widest text-accent font-bold">{content['hero.badge']}</span>
+        </div>
+
+        <!-- H1 -->
+        <h1 class="font-display font-extrabold text-[clamp(42px,6vw,80px)] leading-[1.0] tracking-tight -ml-[0.05em]">
+            <span class="block text-text">{content['hero.h1.1']}</span>
+            <span class="block text-accent">{content['hero.h1.2']}</span>
+            <span class="block text-outline">{content['hero.h1.3']}</span>
+        </h1>
+
+        <!-- Subtext -->
+        <p class="font-body font-light text-text2 text-[15px] leading-relaxed max-w-xl">
+            {content['hero.subtext']}
+        </p>
+
+        <!-- CTA Row -->
+        <div class="flex flex-wrap items-center gap-4 pt-4">
+            <a href="#work" class="inline-flex items-center gap-2 bg-accent text-bg px-8 py-3.5 rounded-[2px] font-mono text-[11px] font-bold uppercase tracking-widest hover:bg-[#00C4AF] hover:-translate-y-[1px] hover:shadow-glow-btn transition-all duration-300">
+                {content['hero.cta.work']}
+                <iconify-icon icon="solar:arrow-right-linear" width="16" stroke-width="2"></iconify-icon>
+            </a>
+            <a href={content['links.resume']} download target="_blank" class="inline-flex items-center gap-2 bg-transparent border border-border text-text px-8 py-3.5 rounded-[2px] font-mono text-[11px] uppercase tracking-widest hover:border-text2 transition-all duration-300">
+                {content['hero.cta.resume']}
+                <iconify-icon icon="solar:file-download-linear" width="16" stroke-width="1.5"></iconify-icon>
+            </a>
+        </div>
+
+        <!-- Stats Bar -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-border border border-border rounded-lg overflow-hidden mt-12 max-w-3xl">
+            <div class="bg-surface p-6 flex flex-col justify-center">
+                <span class="font-display font-extrabold text-4xl text-accent mb-1">7+</span>
+                <span class="font-mono text-[10px] text-text3 uppercase tracking-widest">{content['stats.years']}</span>
+            </div>
+            <div class="bg-surface p-6 flex flex-col justify-center">
+                <span class="font-display font-extrabold text-4xl text-accent mb-1">40%</span>
+                <span class="font-mono text-[10px] text-text3 uppercase tracking-widest">{content['stats.scalability']}</span>
+            </div>
+            <div class="bg-surface p-6 flex flex-col justify-center">
+                <span class="font-display font-extrabold text-4xl text-accent mb-1">90%</span>
+                <span class="font-mono text-[10px] text-text3 uppercase tracking-widest">{content['stats.coverage']}</span>
+            </div>
+        </div>
+    </div>
+</section>
